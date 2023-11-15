@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://gikolab.com/components/web-checkout/css/style.css">
+    <link rel="stylesheet" href="https://gikolab.com/components/web-checkout/css/camera.css">
+    <link rel="stylesheet" href="https://gikolab.com/components/web-checkout/css/slider.css">
+    <link rel="stylesheet" href="https://gikolab.com/components/web-checkout/css/modaldp.css">
+    <link rel="stylesheet" href="https://gikolab.com/components/web-checkout/css/lastmodal.css">
+    <link rel="stylesheet" href="https://gikolab.com/components/web-checkout/css/modal-od-oi.css">
+    <link rel="stylesheet" href="https://gikolab.com/components/web-checkout/css/filters.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <title>Configurar pedido - giko </title>
+</head>
+
+<body>
+    <style>
+        #formula-form input {
+            border: 1px solid #000 !important;
+        }
+    </style>
+    <article class="wrapper">
+        <section class="head-steps">
+            <div class="step"><span class="step step__span active__span">1</span> Prescripción </div>
+            <div class="step hide"><span class="step step__span ">2</span> Fórmula </div>
+            <div class="step hide"><span class="step step__span">3</span> Material y filtros </div>
+        </section>
+        <section style="overflow: hidden;overflow-x: scroll;scroll-snap-type: x mandatory;position: relative;">
+            <article class="body-options ">
+
+                <section class="step_one">
+                    <h2> Dinos como necesitas tus lentes</h2>
+                    <p>Puedes escoger tus lentes con prescripción médica, ó simplemente de manera preventiva para cuidar
+                        tus ojos
+                        de
+                        los rayos del UV y de la luz de las pantallas</p>
+
+                    <div class="step_options">
+                        <button class="step_options--button next">
+                            <img src="https://cdn-giko.s3.us-east-2.amazonaws.com/wp-content/uploads/2023/09/14111430/info_ico.svg"
+                                alt="" srcset="">
+                            Con Prescripción médica
+                            <p class="step_options--descript">Tengo un diagnóstico visual y necesito unos lentes para
+                                corregir mi
+                                visión
+                            </p>
+                        </button>
+                        <button class="step_options--button next" id="show-options">
+                            <img src="https://cdn-giko.s3.us-east-2.amazonaws.com/wp-content/uploads/2023/09/14111430/info_ico.svg"
+                                alt="" srcset="">
+                            Sin Prescripción médica
+                            <p class="step_options--descript">
+                                Tengo una excelente visión pero quiero cuidar mis lentes de la luz del sol y de los
+                                computadores
+                            </p>
+                        </button>
+                    </div>
+
+                </section>
+
+                <section class="step_one-two">
+                    <button id="previus">Volver</button>
+                    <h2>Háblanos un poco de tí</h2>
+                    <p>La edad del usuario y sus actividades son fundamentales para recomendar los lentes adecuados para
+                        tí</p>
+
+                    <form name="preference" method="post">
+                        <div>
+                            <label for="">Edad del usuario</label>
+                            <input style="border: 1px solid #000;" type="number" name="edad" id=""
+                                placeholder="Escribe la edad en años" />
+                        </div>
+                        <div id="preguntas">
+
+                        </div>
+
+                    </form>
+
+                    <button id="next" class="next submit-preference" style="width:50%; margin: 0 auto;">
+                        Continuar
+                        <img style="margin-left:10px; transform: rotate(180deg);"
+                            src="https://cdn-giko.s3.us-east-2.amazonaws.com/wp-content/uploads/2023/08/22122027/back_arrow.svg"
+                            alt="">
+                    </button>
+                </section>
+
+                <section class="step_three">
+                    <button id="previus">Volver</button>
+
+                    <div class="info-formula">
+                        <h2>Fórmula médica</h2>
+                        <p>Usa tu cámara para tomar una foto de tu fórmula o sube la foto de tu fórmula. Busca la parte
+                            de tu
+                            prescripción
+                            que se ve de la siguiente manera.</p>
+                        <img style="width: 100%;"
+                            src="https://cdn-giko.s3.us-east-2.amazonaws.com/wp-content/uploads/2023/08/16103327/ejemplo_formula%402x.png">
+                    </div>
+
+                    <div class="file-uploaded hide">
+                        <h4> <img
+                                src="https://cdn-giko.s3.us-east-2.amazonaws.com/wp-content/uploads/2023/08/22165152/check-item.svg">
+                            Tu fórmula médica
+                        </h4>
+                        <p style="font-size: 14px;">
+                            Esta imagen corresponde a la foto que subiste con tu cámara o archivo. Si los datos de la
+                            fórmula no
+                            coinciden o deseas cambiarla puedes hacer click en reemplazar.
+                        </p>
+                        <p class="hide" style="display: flex; text-align:left; font-size:14px;"><img class="m-2"
+                                src="https://cdn-giko.s3.us-east-2.amazonaws.com/wp-content/uploads/2023/08/25103549/alert.svg"
+                                alt="" srcset="">
+                            Puedes reemplazar tu fórmula tomando una foto o subiendo una imagen. La información subida
+                            previamente se
+                            reemplazará por el contenido de la nueva formula que subas.
+                        </p>
+                        <div style="background-color: transparent;" class="hide">
+                            <button type="button" data-toggle="modal" data-target="#cameraModal"
+                                class="step_options--outline md">
+                                <img
+                                    src="https://cdn-giko.s3.us-east-2.amazonaws.com/wp-content/uploads/2023/08/16081043/photo.svg" />
+                                Tomar foto
+                            </button>
+                            <label style="padding-top: 5px;" class="step_options--bgfull md" for="document">
+                                <img
+                                    src="https://cdn-giko.s3.us-east-2.amazonaws.com/wp-content/uploads/2023/08/16081807/upload.svg" />
+                                Subir imagen
+                            </label>
+                        </div>
+                        <div>
+                            tuFormula.jpg
+                            <button class="show-step">Remplazar</button>
+                        </div>
+                    </div>
+
+                    <div class="step_options flex">
+                        <button id="tomar-foto" type="button" data-toggle="modal" data-target="#cameraModal"
+                            class="step_options--outline md">
+                            <img
+                                src="https://cdn-giko.s3.us-east-2.amazonaws.com/wp-content/uploads/2023/08/16081043/photo.svg" />
+                            Tomar foto
+                        </button>
+                        <label id="subir-img" style="padding-top: 5px;" class="step_options--bgfull md" for="document">
+                            <img
+                                src="https://cdn-giko.s3.us-east-2.amazonaws.com/wp-content/uploads/2023/08/16081807/upload.svg" />
+                            Subir imagen
+                        </label>
+                        <a href="" class="hide" id="obtener" onclick="getPhoto()">Obtener foto</a>
+                        <input id="document" class="hide" type="file"  />
+                        <p id="p-open-formula" class="hide">Para continuar con el proceso debes ingresar los datos de tu
+                            formula, de
+                            esta manera verificarás que todo está correctamente</p>
+                        <button style="margin: 0 auto; width: 60%;" type="button" data-toggle="modal"
+                            data-target="#formulaForm" id="open-formula" class="step_options--bgfull xl hide">
+                            Ingresar datos de mi fórmula
+                        </button>
+                        <button style="margin: 0 auto; width: 60%; border: none;" type="button" id="show-again"
+                            class="step_options--outline xl hide">
+                            Subir una fórmula
+                        </button>
+                        <div style="display: flex; align-items: flex-start;">
+                            <input style="margin: 5px 10px" type="checkbox" name="" id="no-formula" />
+                            <label style="text-align: left;">
+                                No cuento en este momento con la fórmula, pero conozco mi
+                                prescripción
+                            </label>
+                        </div>
+                        <div style="display: flex; align-items: flex-start;">
+                            <a href="#login" style="text-decoration: none;">
+                                <input style="margin: 5px 10px" type="checkbox" name="" id="modal-formulas" />
+                                <label style="text-align: left; color: #000;">
+                                    Ya tengo una fórmula previamente registrada
+                                </label>
+                            </a>
+                        </div>
+                        <!-- <div>
+              <input style="margin: 5px 10px" type="checkbox"  name="" id="">
+              <label style="text-align: left;">Ya tengo una fórmula previamente registrada</label>
+            </div> -->
+                    </div>
+
+                    <div class="after_take_photo flex hide" style="justify-content: center; margin-top: 50px;">
+                        <p>Para continuar con el proceso debes ingresar los datos de tu, formula de esta manera
+                            verificarás que todo
+                            está correctamente</p>
+
+                        <button style="width: 60%;" type="button" data-toggle="modal" data-target="#formulaForm"
+                            class="step_options--bgfull md" for="document">
+                            Ingresar datos de mi fórmula
+                        </button>
+                    </div>
+
+
+                    <div class="table-formula border rounded p-2 col mt-5 hide">
+                        <div class="flex  mx-2 justify-center align-items-center row border-bottom">
+                            <label class="col" style="text-align: left !important;"><b>Edad del usuario:</b></label>
+                            <p class="user-age col m-0">18 años</p>
+                            <button type="button" data-toggle="modal" data-target="#formulaForm"
+                                class="col btn bg-transparent" style="text-align: right !important;"><img
+                                    src="https://cdn-giko.s3.us-east-2.amazonaws.com/wp-content/uploads/2023/08/24115618/edit.svg"
+                                    alt=""></button>
+                        </div>
+                        <div class="row mx-2 justify-center align-items-center  border-bottom p-2">
+                            <label class="col dp-number" style="text-align: left !important;"> <b>Distancia pupilar</b> <br>
+                                <span class="dp-number">2 Números</span> :</label>
+                            <p class="col dp-i"> <b>Izquierdo </b> <br> <span>18.0</span></p>
+                            <p class="col dp-d"> <b>Derecho</b> <br> <span>17.5</span></p>
+                        </div>
+                        <div class="row mx-2 justify-center align-items-center  border-bottom p-2">
+                            <label class="col" style="text-align: left !important;"> <b>Ojo derecho:</b></label>
+                            <p class="col m-0 od-sph"> <b>Esfera</b> <br> <span> +1.75 </span> </p>
+                            <p class="col m-0 od-cyl"> <b>Cilindro</b> <br><span> -0.75 </span> </p>
+                            <p class="col m-0 od-axis"> <b>Eje</b> <br><span> -0.75 </span> </p>
+                        </div>
+                        <div class="row mx-2 p-2"">
+                            <label class="col" style="text-align: left !important;"> <b>Ojo izquierdo:</b> </label>
+                            <p class="col m-0 oi-sph"> <b> Esfera </b> <br> <span> +1.75 </span> </p>
+                            <p class="col m-0 oi-cyl"> <b>Cilindro </b> <br><span> -0.75 </span> </p>
+                            <p class="col m-0 oi-axis"> <b>Eje</b> <br><span> -0.75 </span> </p>
+                        </div>
+                        <div class="row mx-2 p-2 border-top add-wrap">
+                            <label class="col" style="text-align: left !important;"> <b>Adicción</b> </label>
+                            <p class="col m-0 add"> </p>
+                            <p class="col m-0"></p>
+                            <p class="col m-0"></p>
+                        </div>
+                    </div>
+
+
+                    <button class="my-5 btn bg-transparent next hide" id="continuar-formula"
+                        style="font-weight: bold;color:#004DC8; text-decoration: underline; margin: 0 auto; border: 2px solid #004DC8; border-radius: 100px; padding: 5px 60px;">
+                        Continuar
+                    </button>
+
+                </section>
+
+                <section class="step_four">
+                    <button id="previus">Volver</button>
+
+                    <h2>Escoge los filtros para tus lentes</h2>
+
+                    <!-- Filters section -->
+                    <div id="container">
+                    </div>
+
+
+
+                </section>
+            </article>
+        </section>
+    </article>
+
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="cameraModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Toma una fotografía de tu formula</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <p>Acerca la fórmula la cámara, asegúrate de centrarla y toma la fotografía con el botón en la parte
+                        inferior
+                    </p>
+
+                    <h5 id="loadingCamera">Estamos accediendo a tu camara...</h5>
+                    <canvas class="photo"></canvas>
+                    <video class="player hide"></video>
+                    <div class="strip"></div>
+                </div>
+                <div class="modal-footer">
+                    <button data-dismiss="modal" aria-label="Close" class="step_options--bgfull md hide">De
+                        acuerdo</button>
+                    <button class="take-photo">
+                        <img src="https://cdn-giko.s3.us-east-2.amazonaws.com/wp-content/uploads/2023/08/16092301/Mask-Group-40.svg"
+                            alt="">
+                    </button>
+                    <!-- <select name="" id="listaDeDispositivos">
+            <option value="">list camera options</option>
+          </select> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal  Formula form-->
+    <div class="modal fade" id="formulaForm" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header" style="border-bottom: 1px solid #eee !important;">
+                    <button class="return-btn" style="border: none; background: none;" type="button" data-dismiss="modal" aria-label="Close">
+                        <img decoding="async" style="transform: rotate(180deg);" src="https://gikolab.com/components/web-checkout/assets/arrow.svg" alt="">
+                        <span aria-hidden="true" style="font-size: 12px;font-weight: bold;text-decoration: underline;">Volver</span>
+                    </button>
+                    <h5 class="modal-title" id="exampleModalLabel" style="margin-bottom: 0px; font-size: 15px !important; color: #001A45 !important;">
+                        Ingresa tu fórmula Manualmente
+                    </h5>
+                </div>
+                
+                <div class="modal-body" style="overflow: hidden;overflow-y: scroll;">
+
+                    <form id="formula-form" action="">
+
+                        <div class="d-flex flex-column">
+                            <div class="row border-bottom pb-4" width="80%" style="padding-right: 40px;">
+                                <label class="col flex align-items-center" for="age"><strong> Edad del usuario
+                                    </strong></label>
+                                <input style="height: 40px; border-radius: 100px; margin-left: 20px;" type="number"
+                                    name="age" id="" placeholder="Escribe aqui tu edad en años" disabled />
+                            </div>
+
+                            <div class="row align-items-center pt-4 pb-3">
+                                <label class="col-8"><strong> Distancia Pupilar </strong></label>
+                                <button type="button" id="distanciap" class="col row align-items-center"
+                                    data-toggle="modal" data-target="#dpupilar"
+                                    style="border:none; background-color: transparent;">
+                                    <p class="col-8 info">Como saber mi distancia pupilar?</p>
+                                    <img class="col" height="25"
+                                        src="https://cdn-giko.s3.us-east-2.amazonaws.com/wp-content/uploads/2023/08/16131437/info.svg"
+                                        alt="information" />
+                                </button>
+                            </div>
+
+                            <div class="row px-4 pb-3">
+                                <div class="col">
+                                    <input type="radio" value="1" name="dpnumber" id="dp-number" required checked />
+                                    <label for="dp-number">Un número</label>
+                                </div>
+                                <div class="col">
+                                    <input type="radio" value="2" name="dpnumber" id="dp-number" />
+                                    <label for="">Dos números</label>
+                                </div>
+                            </div>
+
+                            <div class="row mb-2 pb-3 px-4 gap-3 border-bottom">
+                                <select class="col mr-2" name="dpval1" id="dp-val-1">
+                                    <option value="0.0">0.0</option>
+                                    <option value="12.0">12.0</option>
+                                </select>
+                                <select class="col hide" name="dpval2" id="dp-val-2">
+                                    <option value="0.0">0.0</option>
+                                    <option value="20.0">20.0</option>
+                                </select>
+                            </div>
+
+                            <section class="row py-3 border-bottom">
+                                <div class="row align-items-center">
+                                    <label class="col-8"> <strong> Ojo derecho </strong> <span>(OD)</span></label>
+                                    <button type="button" id="distanciap" class="col row align-items-center"
+                                        data-toggle="modal" data-target="#od-oi-details"
+                                        style="border:none; background-color: transparent;">
+                                        <p class="col-8 info">Como diligencio este campo?</p>
+                                        <img class="col" height="25"
+                                            src="https://cdn-giko.s3.us-east-2.amazonaws.com/wp-content/uploads/2023/08/16131437/info.svg"
+                                            alt="information" />
+                                    </button>
+                                </div>
+
+                                <div class="row py-2 boder-bottom">
+                                    <div class="col-4 quantity">
+                                        <label class="col-12" for="od-sph">SPH (Esfera)</label>
+                                        <div class="flex mt-2">
+                                            <button class="col-2 plus-button">+</button>
+                                            <input type="number" name="odsph" id="od-sph" class="col-6 text-center"
+                                                value="0.00" />
+                                            <button class="col-2 minus-button">-</button>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <label class="col-12" for="od-cyl">CYL (Cilindro)</label>
+                                        <div class="flex mt-2">
+                                            <button class="col-2 plus-button">+</button>
+                                            <input type="number" name="odcyl" id="od-cyl" class="col-6 text-center"
+                                                value="0.00" />
+                                            <button class="col-2 minus-button">-</button>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <label style="width: 100%; text-align: right;" for="odrangevalue">Axis
+                                            (Eje)</label>
+                                        <div class="row mt-2 justify-content-between slider-wrapper">
+                                            <input class="col-6 p-0" type="range" min="0" max="180" value="0"
+                                                id="odrangevalue" name="odrangevalue" step="1" disabled />
+                                            <output class="col-4" for="odrangevalue" aria-hidden="true"
+                                                disabled>0</output>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <section class="row py-3 border-bottom">
+                                <div class="row">
+                                    <label class="col-8"> <strong> Ojo Izquierdo </strong> <span>(OI)</span></label>
+                                    <button type="button" id="distanciap" class="col row align-items-center"
+                                        data-toggle="modal" data-target="#od-oi-details"
+                                        style="border:none; background-color: transparent;">
+                                        <p class="col-8 info">Como diligencio este campo?</p>
+                                        <img class="col" height="25"
+                                            src="https://cdn-giko.s3.us-east-2.amazonaws.com/wp-content/uploads/2023/08/16131437/info.svg"
+                                            alt="information" />
+                                    </button>
+                                </div>
+
+                                <div class="row py-2">
+                                    <div class="col-4">
+                                        <label class="col-12" for="oi-sph">SPH (Esfera)</label>
+                                        <div class="flex mt-2">
+                                            <button class="col-2 plus-button">+</button>
+                                            <input type="number" name="oisph" id="oi-sph" class="col-6 text-center"
+                                                value="0.00" />
+                                            <button class="col-2 minus-button">-</button>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <label class="col-12" for="oi-cyl">CYL (Cilindro)</label>
+                                        <div class="flex mt-2">
+                                            <button class="col-2 plus-button">+</button>
+                                            <input type="number" name="oicyl" id="oi-cyl" class="col-6 text-center"
+                                                value="0.00" />
+                                            <button class="col-2 minus-button">-</button>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <label style="width: 100%; text-align: right;" for="oirangevalue">Axis
+                                            (Eje)</label>
+                                        <div class="row mt-2 justify-content-between slider-wrapper">
+                                            <input class="col-6 p-0" type="range" min="0" max="180" value="0"
+                                                id="oirangevalue" name="oirangevalue" step="1" disabled />
+                                            <output class="col-4" for="oirangevalue" aria-hidden="true"
+                                                disabled>0</output>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <section class="row py-3 border-bottom ">
+                                <div class="row toggleAddCheck" style="margin-bottom: 20px;">
+                                    <label style="width: 90%;" for="adiccion">¿Necesitas una adición?</label>
+                                    <input style="width: 10%; height: 15px;" type="checkbox" name="addicion" id="adiccion" />
+                                </div>
+                                <div class="row adiccion hide">
+                                    <label class="col-8"> <strong> Adición </strong> <span>(ADD)</span></label>
+                                    <button type="button" id="distanciap" class="col row align-items-center"
+                                        data-toggle="modal" data-target="#od-oi-details"
+                                        style="border:none; background-color: transparent;">
+                                        <p class="col-8 info">Como diligencio este campo?</p>
+                                        <img class="col" height="25"
+                                            src="https://cdn-giko.s3.us-east-2.amazonaws.com/wp-content/uploads/2023/08/16131437/info.svg"
+                                            alt="information" />
+                                    </button>
+                                </div>
+
+                                <div class="row py-2 adiccion hide">
+                                    <div class="">
+                                        <div class="flex mt-2">
+                                            <button class="col-2 plus-button">+</button>
+                                            <input type="number" name="add" id="add" class="col-8 text-center"
+                                                value="0.75" />
+                                            <button class="col-2 minus-button">-</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="row py-3">
+                            <button style="width: 50%; margin: 0 auto;" data-dismiss="modal" aria-label="Close"
+                                type="submit" id="verify-formula"
+                                class="step_options--bgfull px-4 align-self-end">Continuar</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal  Formula form-->
+    <div class="modal fade" id="filtersForm" tabindex="-1" data-backdrop="static" role="dialog"
+        aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header"     style="border-bottom: 1px solid #eee !important;">
+                    <button class="return-btn" style="border: none; background: none;" type="button" data-dismiss="modal" aria-label="Close">
+                        <img style="transform: rotate(180deg);" src="https://gikolab.com/components/web-checkout/assets/arrow.svg" alt="">
+                        <span aria-hidden="true" style="font-size: 12px;font-weight: bold;text-decoration: underline;">Volver</span>
+                    </button>
+                    <h5 class="modal-title" id="exampleModalLabel" style="margin-bottom: 0px; font-size: 15px !important; color: #001A45 !important;">Elige según tus necesidades</h5>
+                </div>
+                <div class="modal-body">
+                    <h5 class="breadcrumbs"></h5>
+                    <h3 class="title"></h3>
+
+                </div>
+                <div class="modal-footer">
+                    <button style="width: 50%; margin: 0 auto; background: #D1D0DB;" data-dismiss="modal"
+                        aria-label="Close" type="submit" id="verify-formula"
+                        class="step_options--bgfull px-4 align-self-end" disabled>Continuar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal DP -->
+    <div class="modal fade" id="oirangevalue" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">`
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="title-modal">
+                        <img src="https://cdn-giko.s3.us-east-2.amazonaws.com/wp-content/uploads/2023/09/22125653/info.png"
+                            alt="Descripción de la imagen">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">¿Cómo saber mi distancia pupilar?</h1>
+                        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="contenedor_distancia">
+
+                        <button class="tab-button" style="padding:0px;" data-target="info-tab-one">¿Qué es la distancia
+                            pupilar?</button>
+                        <div class="indicator-bar" id="indicator"></div>
+                        <button class="tab-button" style="padding:0px;" data-target="info-tab-dwo">Distancia pupilar de
+                            1 número
+                            (DP)</button>
+                        <div class="indicator-bar" id="indicator"></div>
+                        <button class="tab-button" style="padding:0px;" data-target="info-tab-three">Distancia pupilar
+                            de 2 números
+                            (DNP)</button>
+                        <div class="indicator-bar" id="indicator"></div>
+
+                    </div>
+
+                    <!-- Contenido oculto correspondiente a cada botón -->
+                    <div class="hidden-content" id="info-tab-one">
+                        <div class="contenedor-descripcion">
+                            <div class="image-container">
+                                <img src="https://cdn-giko.s3.us-east-2.amazonaws.com/wp-content/uploads/2023/09/22142041/Mask-Group-79.png"
+                                    alt="Descripción de la imagen">
+                            </div>
+                            <p>Es la distancia entre los centros de tus pupilas ya sea entre sí o con respecto a la
+                                nariz.
+                                Estas medidas son importantes para asegurar una alineación adecuada de las lentes con
+                                los
+                                ojos y la cara del paciente, especialmente para lentes progresivos. Este valor es
+                                fundamental para que nuestros fabricantes puedan colocar adecuadamente el centro óptico
+                                de
+                                tus lentes y brindar la mejor visión posible. Es fundamental sobre todo en lentes
+                                progresivos.</p>
+
+                            <p>Este valor es fundamental para que nuestros fabricantes puedan colocar adecuadamente el
+                                centro óptico de tus lentes y brindar la mejor visión posible. Es fundamental sobre todo
+                                en
+                                lentes progresivos</p>
+                        </div>
+                    </div>
+                    <div class="hidden-content" id="info-tab-dwo">
+                        <div class="image-container">
+                            <img src="https://cdn-giko.s3.us-east-2.amazonaws.com/wp-content/uploads/2023/09/22142041/Mask-Group-79.png"
+                                alt="Descripción de la imagen">
+                        </div>
+                        <div class="contenedor-descripcion">
+                            <p>Es la distancia entre los centros de tus pupilas ya sea entre sí o con respecto a la
+                                nariz.
+                                Estas medidas son importantes para asegurar una alineación adecuada de las lentes con
+                                los
+                                ojos y la cara del paciente, especialmente para lentes progresivos. Este valor es
+                                fundamental para que nuestros fabricantes puedan colocar adecuadamente el centro óptico
+                                de
+                                tus lentes y brindar la mejor visión posible. Es fundamental sobre todo en lentes
+                                progresivos.</p>
+
+                            <p>Este valor es fundamental para que nuestros fabricantes puedan colocar adecuadamente el
+                                centro óptico de tus lentes y brindar la mejor visión posible. Es fundamental sobre todo
+                                en
+                                lentes progresivos</p>
+                        </div>
+                    </div>
+                    <div class="hidden-content" id="info-tab-three">
+                        <div class="image-container">
+                            <img src="https://cdn-giko.s3.us-east-2.amazonaws.com/wp-content/uploads/2023/08/28210038/articulo8_banner-1.png"
+                                alt="Descripción de la imagen">
+                        </div>
+                        <div class="contenedor-descripcion">
+                            <p>Este valor es fundamental para que nuestros fabricantes puedan colocar adecuadamente el
+                                centro óptico de tus lentes y brindar la mejor visión posible. Es fundamental sobre todo
+                                en
+                                lentes progresivos</p>
+                            <p>Es la distancia entre los centros de tus pupilas ya sea entre sí o con respecto a la
+                                nariz.
+                                Estas medidas son importantes para asegurar una alineación adecuada de las lentes con
+                                los
+                                ojos y la cara del paciente, especialmente para lentes progresivos. Este valor es
+                                fundamental para que nuestros fabricantes puedan colocar adecuadamente el centro óptico
+                                de
+                                tus lentes y brindar la mejor visión posible. Es fundamental sobre todo en lentes
+                                progresivos.</p>
+                        </div>
+                    </div>
+
+                    <div class="modal-body">
+                        <article>
+
+                    </div>
+
+                    </article>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">De acuerdo</button>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal -->
+
+    <div class="modal fade" id="confirmar_compra" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">¡Tus lentes fueron agregados con éxito a la
+                        bolsa!
+                    </h1>
+                    <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                    <article>
+                        <div class="container_child">
+
+                            <div class="images">
+                                <img src="https://cdn-giko.s3.us-east-2.amazonaws.com/wp-content/uploads/2023/09/08122948/card_photo-29.png"
+                                    alt="Descripción de la imagen" class="imagen-destacada"></img>
+                            </div>
+                            <div class="referencia">
+                                <h1 class="title_referencia">Montura <span>Titán</span> </h1>
+                                <ul class="referencias">
+                                    <li>Marca: <span> Sander </span></li>
+                                    <li>Referencia: <span> FT5712 </span></li>
+                                </ul>
+                            </div>
+                            <div class="material_filter">
+                                <h1 class="title_filter">Material y filtros</h1>
+                                <h2 class="title_filter_code">Material CR 39</h2>
+                                <ul class="referencias">
+
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="formula_medica">
+                            <h1 class="title_formula">Fórmula médica</h1>
+                            <div class="date_formula">
+                                <div class="grid-container">
+                                    <div class="grid-item">
+                                        <div class="edad-usuario">Edad del usuario:</div>
+                                        <div class="edad">27 años</div>
+                                        <!-- <div class="boton-editar">
+                      <span class="boton-texto">Editar</span>
+                      <a href="tu_enlace.html" class="boton-enlace">
+                        <img src="https://gikolab.com/wp-content/uploads/2023/09/edit.svg" alt="Icono">
+                      </a>
+                    </div> -->
+
+                                    </div>
+                                    <div class="grid-items">
+                                        <div class="grid-title">Distancia pupilar:</div>
+                                        <div class="distancias-pupilar">
+                                            <div class="izquierdo">
+                                                <div>Número 1 (DP)</div>
+                                                <div>18.0</div>
+                                            </div>
+                                            <div class="derecho">
+                                                <div>Número 2 (NDP)</div>
+                                                <div>17.5</div>
+                                            </div>
+                                        </div>
+                                        <div class="distancia-numero">
+                                            <!-- Esto es lo que se mostrará en teléfono -->
+                                            <div class="numero-2">Número 2</div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="grid-item-eyes">
+                                        <h1 class="title-ojo">Ojo <br>derecho:</h1>
+                                        <div class="red od">
+                                            <p><span>Esfera</span> <em>+1.75</em> </p>
+                                            <p><span>Cilindro</span> <em>+1.75</em> </p>
+                                            <p><span>Eje</span> <em>30</em> </p>
+                                        </div>
+
+                                    </div>
+                                    <div class="grid-item-eyes">
+                                        <h1 class="ojo-derecho">Ojo <br> izquierdo:</h1>
+                                        <div class="red oi">
+                                            <p><span>Esfera</span> <em>+1.75</em> </p>
+                                            <p><span>Cilindro</span> <em>+1.75</em> </p>
+                                            <p><span>Eje</span> <em>30</em> </p>
+                                        </div>
+                                    </div>
+                                    <div class="grid-item-eyes">
+                                        <h1 class="title-ojo">Adicción</h1>
+                                        <div class="red od">
+                                            <p> <em>+1.5</em> </p>
+                                            <p>  </p>
+                                            <p>  </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="total">
+                                Sub total: $<span> 0.0 </span>
+                            </div>
+                        </div>
+
+                    </article>
+
+                </div>
+                <div class="modal-footer">
+                    <a href="https://gikolab.com/" class="link_add_products">Seguir agregando productos</a>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Finalizar compra</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="od-oi-details" tabindex="-1" aria-labelledby="od-oi-details" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="title-modal">
+                        <img src="https://cdn-giko.s3.us-east-2.amazonaws.com/wp-content/uploads/2023/09/22125653/info.png"
+                            alt="Descripción de la imagen">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">¿Cómo diligenciar este campo?</h1>
+                        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="contenedor_distancia">
+                        <button class="tab-button-1 active" data-target="info-tab-one-esfera">SPH (Esfera)</button>
+                        <div class="indicator-bar" id="indicator"></div>
+                        <button class="tab-button-1" data-target="info-tab-dwo-cilindro">CYL (Cilindro)</button>
+                        <div class="indicator-bar" id="indicator"></div>
+                        <button class="tab-button-1" data-target="info-tab-three-eje">Axis (eje)</button>
+                        <div class="indicator-bar" id="indicator"></div>
+                        <button class="tab-button-1" data-target="info-tab-four-adiccion">Adición</button>
+                        <div class="indicator-bar" id="indicator"></div>
+                    </div>
+
+                    <!-- Contenido oculto correspondiente a cada botón -->
+                    <div class="modal-body">
+                        <div class="sectionmodal-1" id="info-tab-one-esfera">
+                            <div class="contenedor-descripcion">
+                                <div class="container_con">
+
+                                    <div class="cont_one">
+                                        <div class="title_cont">
+                                            <h1>SPH(esfera)</h1>
+                                        </div>
+                                        <div class="image-container_cont" style="padding: 8px;">
+                                            <img src="https://gikolab.com/wp-content/uploads/2023/09/dioptrias.svg"
+                                                alt="Descripción de la imagen">
+                                        </div>
+                                        <div class="title_cont_hiper">
+                                            <h1>Hipermetropía</h1>
+                                        </div>
+                                    </div>
+
+                                    <div class="cont_one">
+                                        <div class="title_cont">
+                                            <h1>SPH(esfera)</h1>
+                                        </div>
+                                        <div class="image-container_cont">
+                                            <img src="https://cdn-giko.s3.us-east-2.amazonaws.com/wp-content/uploads/2023/11/07140531/miopia-modal.png"
+                                                style="width: 120px;"
+                                                alt="Descripción de la imagen">
+                                        </div>
+                                        <div class="title_cont_hipert">
+                                            <h1>Miopía</h1>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+                                <div class="descripcion">
+                                    <p class="parrafo" style="text-align: justify;">
+                                        El campo “ESFERA” indica la cantidad de corrección necesaria para enfocar correctamente la visión del paciente.
+                                    </p>
+                                    <p>
+                                        Valor positivo (+) en este campo indica Hipermetropía, lo que significa que el paciente tiene dificultad para enfocar objetos cercanos. Un valor negativo (-) indica Miopía, lo que significa que el paciente tiene dificultad para enfocar objetos lejanos.
+                                    </p>
+                                    <p>
+                                        Diligenciar el campo con los botones de agregar y quitar hasta llegar al valor que muestra tu fórmula o escribiendo el número de tu fórmula acompañado con el signo + o -.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="sectionmodal-1 hidden-content" id="info-tab-dwo-cilindro">
+                            <div style="left: 0% !important;" class="conta_one">
+                                
+                                <div style="left: 0px !important;display: flex; justify-content: center;" class="image-container_cont">
+                                    <img style="width: 120px;" src="https://cdn-giko.s3.us-east-2.amazonaws.com/wp-content/uploads/2023/11/07151001/cyl-modal.png"
+                                        alt="Descripción de la imagen">
+                                </div>
+                                
+                            </div>
+                            <div class="contenedor-descripcion">
+                                <p>El campo “CILINDRO” se refiere a la cantidad de astigmatismo presente en la visión
+                                    del
+                                    paciente. El astigmatismo es una condición en la cual la córnea o el cristalino del
+                                    ojo
+                                    tienen una forma irregular, lo que resulta en una visión distorsionada.</p>
+                                <p> Un valor
+                                    distinto de cero en este campo indica la presencia de astigmatismo. En tu receta, el
+                                    ojo
+                                    derecho (OD) tiene un cilindro de -0.25, lo que indica un astigmatismo leve.</p>
+                                <p> Puedes
+                                    diligenciar el campo con los botones de agregar y quitar hasta llegar al valor que
+                                    muestra tu fórmula o escribiendo el número de tu fórmula.</p>
+
+                            </div>
+                        </div>
+
+                        <div class="sectionmodal-1 hidden-content" id="info-tab-three-eje">
+                            <div class="conta_Axis">
+                                <div class="image-container_conts">
+                                    <img src="https://cdn-giko.s3.us-east-2.amazonaws.com/wp-content/uploads/2023/11/07151711/astigmatismo-modal.png"
+                                        alt="Descripción de la imagen">
+                                </div>
+                            </div>
+                            <div class="contenedor-descripcion">
+                                <p>El campo “EJE” se refiere a la dirección del astigmatismo. Se mide en grados y va
+                                    desde 0
+                                    a 180 grados. Indica la posición en la que se encuentra la meridiana principal del
+                                    astigmatismo. En tu receta, el ojo derecho (OD) tiene un eje de 15 grados, lo que
+                                    indica
+                                    la dirección del astigmatismo en ese ojo.</p>
+                                <p>El ojo izquierdo (OI) tiene un eje de 125
+                                    grados, lo que indica la dirección del astigmatismo en ese ojo. Puedes diligenciar
+                                    el
+                                    campo con los botones direccionales, escribiendo a mano sobre el campo ó moviendo el
+                                    botón de la barra izquierda hasta llegar al valor del eje que corresponde al que
+                                    muestra
+                                    tu fórmula.</p>
+
+                            </div>
+                        </div>
+
+                        <div class="sectionmodal-1 hidden-content" id="info-tab-four-adiccion">
+
+                            <div class="image-container_contst">
+                                <h1>Selecciona adición</h1>
+                                <img src="https://gikolab.com/wp-content/uploads/2023/09/slider-axis.svg"
+                                    alt="Descripción de la imagen">
+                            </div>
+
+                            <div class="contenedor-descripcion">
+                                <p>Este campo se utiliza para indicar la cantidad de corrección adicional necesaria en
+                                    la
+                                    prescripción para la visión de cerca.</p>
+                                <p>Se usa principalmente en recetas para lentes
+                                    bifocales o progresivos. Si este campo aparece en blanco en tu receta quiere decir
+                                    que
+                                    no se necesita corrección adicional para la visión de cerca. Si este valor aparece
+                                    en
+                                    uno de tus ojos o en los dos, debes diligenciar el valor que corresponda de adición
+                                </p>
+                                <p>
+                                    Puedes diligenciar el campo con los botones direccionales, escribiendo a mano sobre
+                                    el
+                                    campo ó moviendo el botón de la barra izquierda hasta llegar al valor de adición que
+                                    requieras que corresponde al que muestra tu fórmula.</p>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">De acuerdo</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+  <!-- Modal DP -->
+  <div class="modal fade" id="dpupilar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">`
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="title-modal">
+            <img src="https://cdn-giko.s3.us-east-2.amazonaws.com/wp-content/uploads/2023/09/22125653/info.png"
+              alt="Descripción de la imagen">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">¿Cómo saber mi distancia pupilar?</h1>
+            <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="contenedor_distancia">
+
+            <button class="tab-button active" style="padding:0px;" data-target="info-tab-one">¿Qué es la distancia
+              pupilar?</button>
+            <div class="indicator-bar" id="indicator"></div>
+            <button class="tab-button" style="padding:0px;" data-target="info-tab-dwo">Distancia pupilar de 1 número
+              (DP)</button>
+            <div class="indicator-bar" id="indicator"></div>
+            <button class="tab-button" style="padding:0px;" data-target="info-tab-three">Distancia pupilar de 2 números
+              (DNP)</button>
+            <div class="indicator-bar" id="indicator"></div>
+
+          </div>
+
+          <!-- Contenido oculto correspondiente a cada botón -->
+          <div class="sectionmodal" id="info-tab-one">
+            <div class="contenedor-descripcion">
+              <div class="image-container">
+                <img
+                  src="https://cdn-giko.s3.us-east-2.amazonaws.com/wp-content/uploads/2023/10/30152356/dp_main_desktop.png"
+                  alt="Descripción de la imagen">
+              </div>
+              <p>
+                Este valor es fundamental para que nuestros fabricantes puedan colocar adecuadamente el centro óptico de tus lentes y brindar la mejor visión posible. Es fundamental sobre todo en lentes progresivos.
+              </p>
+            </div>
+          </div>
+          <div class="sectionmodal hidden-content" id="info-tab-dwo">
+            <div class="image-container">
+              <img
+                src="https://cdn-giko.s3.us-east-2.amazonaws.com/wp-content/uploads/2023/10/26143621/DP1.png"
+                alt="Descripción de la imagen">
+            </div>
+            <div class="contenedor-descripcion">
+              <p>Es un número único, y es la distancia entre los centros de tus dos pupilas expresada en milímetros. Por lo general está escrita en tu fórmula médica como DP(61/63).</p>
+            </div>
+          </div>
+          <div class="sectionmodal hidden-content" id="info-tab-three">
+            <div class="image-container">
+              <img
+                src="https://cdn-giko.s3.us-east-2.amazonaws.com/wp-content/uploads/2023/09/28193331/dp_2_numbers_desktop.png"
+                alt="Descripción de la imagen">
+            </div>
+            <div class="contenedor-descripcion">
+              <p>La distancia pupilar de 2 números o distancia Nasopupilar es la que va desde el centro de la pupila del ojo hasta el puente de la nariz. Por lo general aparece en tu fórmula médica como DNP(31/32)</p>
+            </div>
+          </div>
+
+          <div class="modal-body">
+            <article>
+
+          </div>
+
+          </article>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">De acuerdo</button>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div
+    class="modal fade show"
+    id="info_prod"
+    tabindex="-1"
+    aria-labelledby="info_prod_label"
+    >
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h1 class="modal-title fs-5" id="info_prod_label">
+            ¡Tus lentes fueron agregados con éxito a la bolsa!
+            </h1>
+            <button
+            type="button"
+            class="btn-close"
+            data-dismiss="modal"
+            aria-label="Close"
+            ></button>
+        </div>
+        <div class="modal-body">
+            <p></p>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">
+            De acuerdo
+            </button>
+        </div>
+        </div>
+    </div>
+    </div>
+
+
+  <div
+    class="modal fade show"
+    id="checkout_formulas"
+    tabindex="-1"
+    aria-labelledby="checkout_formulas"
+    >
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+        <div class="modal-header" style="border: 0px;border-bottom: var(--bs-modal-header-border-width) solid var(--bs-modal-header-border-color) !important;">
+            <h1 class="modal-title fs-5" >
+                Escoge la fórmula que deseas agregar
+            </h1>
+            <button
+            type="button"
+            class="btn-close"
+            data-dismiss="modal"
+            aria-label="Close"
+            ></button>
+        </div>
+        <div class="modal-body" style="height: 500px;overflow: hidden;overflow-y: scroll;"> 
+          <form id="formula-options">
+
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                Continuar
+            </button>
+        </div>
+        </div>
+    </div>
+    </div>
+
+
+
+    <script type="module" src="https://gikolab.com/components/web-checkout/filters.js"></script>
+    <script type="module" src="https://gikolab.com/components/web-checkout/newscript.js"> </script>
+    <script type="module" src="https://gikolab.com/components/web-checkout/script.js"></script>
+    <script type="module" src="https://gikolab.com/components/web-checkout/js/modaldp.js"></script>
+    <script type="module" src="https://gikolab.com/components/web-checkout/js/camera.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.1031.0.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Giko | Mis cupones</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://gikolab.com/components/mi-cuenta/mis-cupones/styles.css"
+    />
+  </head>
+  <body>
+    <article class="my_coupons">
+      <div class="title">
+        <img
+          class="coupon"
+          src="https://cdn-giko.s3.us-east-2.amazonaws.com/wp-content/uploads/2023/09/18113711/mis_cupones.svg"
+          alt="Icono de gafas"
+        />
+        Mis cupones
+      </div>
+      <div class="coupons_wrapper" id="list_coupons">
+        <div class="empty">
+          <img
+            id="logo_giko"
+            src="https://gikolab.com/wp-content/uploads/2023/08/main_animation-1.gif"
+            alt="Logo Giko"
+            srcset=""
+          />
+          <p id="text_giko" >Cargando...</p>
+        </div>
+      </div>
+    </article>
+
+    <div class="alert_copy animate__animated animate__faster">
+      <img
+        src="https://cdn-giko.s3.us-east-2.amazonaws.com/wp-content/uploads/2023/09/04140139/positive.svg"
+        alt="Icon Check"
+      />
+      Texto copiado
+    </div>
+
+    <script>
+      async function copy(text) {
+        try {
+          if (navigator.clipboard) {
+            await navigator.clipboard.writeText(text);
+          }
+          const alert_copy = document.querySelector("div.alert_copy");
+          alert_copy.style.opacity = "1";
+          alert_copy.classList.add("animate__slideInUp");
+          alert_copy.classList.remove("animate__slideOutDown");
+          setTimeout(() => {
+            alert_copy.classList.add("animate__slideOutDown");
+            alert_copy.classList.remove("animate__slideInUp");
+          }, 2000);
+        } catch (err) {
+          console.error("Error al copiar al portapapeles:", err);
+        }
+      }
+    </script>
+
+    <script
+      type="module"
+      src="https://gikolab.com/components/mi-cuenta/mis-cupones/script.js"
+    ></script>
+  </body>
+</html>

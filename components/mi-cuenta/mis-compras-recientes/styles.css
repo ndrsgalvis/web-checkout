@@ -1,0 +1,563 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,700&display=swap");
+
+article.my_shoppings {
+    background: #ffffff 0% 0% no-repeat padding-box;
+    overflow: hidden;
+}
+
+article.my_shoppings div.shoppings_wrapper,
+article.my_shoppings div.detail_wrapper {
+    width: 640px;
+}
+
+article.my_shoppings * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+article.my_shoppings div.shoppings_wrapper section>ul li.date {
+    text-align: right;
+}
+
+article.my_shoppings>button {
+    margin: 15px 22px;
+    float: right;
+    border: none;
+    outline: none;
+    appearance: none;
+    font: normal normal bold 16px/17px Poppins !important;
+    background: #4d63ff 0% 0% no-repeat padding-box;
+    border-radius: 21px;
+    height: 40px;
+    width: 230px;
+    color: white !important;
+    cursor: pointer;
+}
+
+article.my_shoppings>button:hover {
+    background: #004dc8;
+}
+
+article.my_shoppings div.title {
+    padding: 25px;
+    border-bottom: 1px solid #d1d0db;
+    text-align: left;
+    font: normal normal bold 16px/27px Poppins !important;
+    display: flex;
+    justify-content: space-between;
+}
+
+article.my_shoppings div.title label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+    font: normal normal bold 12px Poppins !important;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+article.my_shoppings div.title img.shopping {
+    display: none;
+}
+
+article.my_shoppings div.shoppings_wrapper {
+    padding: 20px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 30px;
+    row-gap: 30px;
+    height: 550px;
+    overflow-y: scroll;
+}
+label.show-on-small-screen img {
+    position: relative;
+    top: 10px;
+}
+
+article.my_shoppings div.detail_wrapper {
+    padding: 20px;
+    width: 100%;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+}
+
+article.my_shoppings div.shoppings_wrapper div.empty {
+    min-width: 100%;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    flex-direction: column;
+    row-gap: 25px;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+article.my_shoppings div.shoppings_wrapper div.empty:only-child {
+    display: flex;
+}
+
+article.my_shoppings div.shoppings_wrapper div.empty p {
+    font: normal normal bold 14px Poppins !important;
+    color: #001a45 !important;
+}
+
+article.my_shoppings div.shoppings_wrapper div.empty img {
+    width: 64px;
+    height: 64px;
+}
+
+article.my_shoppings div.shoppings_wrapper section {
+    background: #ffffff 0% 0% no-repeat padding-box;
+    box-shadow: 0px 0px 10px #84829d63;
+    border-radius: 21px;
+    height: fit-content;
+    padding: 16px 0;
+}
+
+article.my_shoppings div.shoppings_wrapper section>ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    column-gap: 20px;
+    padding: 0 16px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #d1d0db;
+}
+
+article.my_shoppings div.shoppings_wrapper section>ul li {
+    color: #002f7b !important;
+    font: normal normal 500 12px Poppins !important;
+}
+
+article.my_shoppings div.shoppings_wrapper section>ul li p {
+    font: normal normal bold 14px/27px Poppins !important;
+}
+
+article.my_shoppings div.shoppings_wrapper section div.info {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    column-gap: 80px;
+    padding: 16px 16px 0 16px;
+}
+
+article.my_shoppings div.shoppings_wrapper section div.info .list_products div.product {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 40px;
+}
+
+article.my_shoppings div.shoppings_wrapper section div.info .list_products div.product .column {
+    display: flex;
+    flex-direction: column;
+}
+
+article.my_shoppings div.shoppings_wrapper section div.info .list_products div.product .column span.amount {
+    font: normal normal 500 16px Poppins !important;
+    text-align: right;
+    /* margin-top: 30px; */
+}
+
+article.my_shoppings div.shoppings_wrapper section div.info .list_products div.product .column>div {
+    display: flex;
+    align-items: center;
+    column-gap: 40px;
+}
+
+article.my_shoppings div.shoppings_wrapper section div.info .list_products div.product .column>div ul {
+    list-style: none;
+}
+
+article.my_shoppings div.shoppings_wrapper section div.info .list_products div {
+    position: relative;
+}
+
+article.my_shoppings div.shoppings_wrapper section div.info>div p {
+    color: #002f7b !important;
+    font: normal normal bold 14px/27px Poppins !important;
+}
+
+article.my_shoppings div.shoppings_wrapper section div.info .list_products {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+article.my_shoppings div.shoppings_wrapper section div.info .list_products div.product img {
+    width: 100px;
+    height: 40px;
+    object-fit: cover;
+}
+
+article.my_shoppings div.shoppings_wrapper section div.info .list_products div.product a {
+    color: #4d63ff !important;
+    font: normal normal bold 14px/27px Poppins !important;
+}
+
+article.my_shoppings div.shoppings_wrapper section div.info .list_products div.product div div>span {
+    display: block;
+}
+
+article.my_shoppings div.shoppings_wrapper section div.info .list_products div.product span,
+article.my_shoppings div.shoppings_wrapper section div.info .list_products div.product ul li {
+    color: #001a45 !important;
+    font: normal normal 500 10px Poppins !important;
+}
+
+article.my_shoppings div.shoppings_wrapper section div.info .actions {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+article.my_shoppings div.shoppings_wrapper section div.info .actions label {
+    color: #4d63ff !important;
+    font: normal normal bold 14px Poppins !important;
+    text-decoration: underline;
+    text-align: right;
+    cursor: pointer;
+}
+
+article.my_shoppings div.shoppings_wrapper section div.info .actions button {
+    text-decoration: none;
+    background: #4d63ff 0% 0% no-repeat padding-box;
+    border-radius: 21px;
+    color: white !important;
+    font: normal normal bold 16px/17px Poppins !important;
+    height: 41px;
+    padding: 0 20px;
+    display: grid;
+    place-items: center;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+article.my_shoppings div.shoppings_wrapper section div.info .actions button:hover {
+    background: #004dc8;
+}
+
+article.my_shoppings div.shoppings_wrapper section>ul.mobile {
+    display: none;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type="checkbox"]:checked~#nav_screen2 {
+    display: flex;
+}
+
+input[type="checkbox"]:checked~#screen2 {
+    display: grid;
+}
+
+input[type="checkbox"]:checked~#nav_screen1,
+input[type="checkbox"]:checked~#screen1 {
+    display: none;
+}
+
+#nav_screen2,
+#screen2 {
+    display: none;
+}
+
+div.detail_wrapper div.info_order {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+}
+
+div.detail_wrapper div.info_order>div {
+    display: flex;
+    column-gap: 30px;
+}
+
+div.detail_wrapper div.info_order>div p {
+    font: normal normal 500 12px Poppins !important;
+    color: #001a45 !important;
+}
+
+div.detail_wrapper>p {
+    font: normal normal 500 12px Poppins !important;
+    color: #001a45 !important;
+}
+
+div.detail_wrapper>p.email {
+    font: normal normal bold 12px Poppins !important;
+}
+
+div.detail_wrapper div.follow_up {
+    display: flex;
+    column-gap: 20px;
+    align-items: center;
+}
+
+div.detail_wrapper div.follow_up p {
+    font: normal normal bold 12px/27px Poppins !important;
+    color: #001a45 !important;
+}
+
+div.detail_wrapper div.follow_up span {
+    font: normal normal 500 12px Poppins !important;
+    color: #001a45 !important;
+}
+
+div.detail_wrapper div.follow_up a {
+    font: normal normal 500 12px Poppins !important;
+    color: #4d63ff !important;
+}
+
+div.detail_wrapper div.info_order>div span {
+    font: normal normal bold 12px Poppins !important;
+    color: #001a45 !important;
+}
+
+div.detail_wrapper div.info_order>div:nth-child(2) {
+    justify-self: flex-end;
+}
+
+div.detail_wrapper h3 {
+    font: normal normal bold 20px/27px Poppins !important;
+    color: #4d63ff !important;
+    margin: 20px 0;
+}
+
+div.detail_wrapper .details>div:not(:last-child) {
+    border-bottom: 1px solid #d1d0db;
+}
+
+div.detail_wrapper .details div.info p strong {
+    color: #002f7b !important;
+}
+
+div.detail_wrapper div.products ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+div.detail_wrapper div.products>ul {
+    margin: 20px 0;
+}
+
+div.detail_wrapper div.products>ul {
+    max-height: 230px;
+    overflow-y: scroll;
+}
+
+div.detail_wrapper div.products ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div.detail_wrapper div.products ul li>div {
+    display: flex;
+    column-gap: 60px;
+    align-items: center;
+}
+
+div.detail_wrapper div.products ul li ul,
+div.detail_wrapper div.products ul li p.material {
+    margin-top: 5px;
+}
+
+div.detail_wrapper div.products ul li ul li,
+div.detail_wrapper div.products ul li p.material {
+    color: #001a45 !important;
+    font: normal normal 500 10px Poppins !important;
+    padding: 0;
+}
+
+div.detail_wrapper div.products ul li a {
+    color: #4d63ff !important;
+    font: normal normal bold 14px Poppins !important;
+}
+
+div.detail_wrapper div.products ul li img {
+    height: 35px;
+    width: 100px;
+    object-fit: contain;
+}
+
+div.detail_wrapper div.products ul li strong {
+    color: #001a45 !important;
+    font: normal normal bold 12px/14px Poppins !important;
+}
+
+div.detail_wrapper .details div p {
+    display: flex;
+    justify-content: space-between;
+    font: normal normal bold 12px/14px Poppins !important;
+    padding: 10px 0;
+    color: #001a45 !important;
+}
+
+div.detail_wrapper .details div p strong.total {
+    color: #4d63ff !important;
+}
+
+@media screen and (max-width: 480px) {
+
+    article.my_shoppings div.shoppings_wrapper div.empty {
+        height: calc(100vh - 250px);
+    }
+
+    article.my_shoppings div.title {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        column-gap: 10px;
+    }
+
+    article.my_shoppings div.shoppings_wrapper section div.info .list_products div.product .column span.amount {
+        margin-top: 0 !important;
+        position: relative;
+        bottom: 24px;
+    }
+    article.my_shoppings div.shoppings_wrapper section>ul{
+        column-gap: 0 !important;
+    }
+
+    article.my_shoppings div#nav_screen2 {
+        justify-content: space-between;
+    }
+
+    article.my_shoppings div.title img.shopping {
+        display: block;
+        height: 30px;
+        width: 30px;
+        object-fit: contain;
+    }
+
+    article.my_shoppings div.shoppings_wrapper {
+        height: fit-content;
+    }
+
+    article.my_shoppings div.detail_wrapper {
+        padding: 30px 20px;
+        height: fit-content;
+        width: 100%;
+    }
+
+    article.my_shoppings div.shoppings_wrapper section div.info .actions label {
+        position: relative;
+        top: 10px !important;
+    }
+
+    article.my_shoppings div.shoppings_wrapper section {
+        position: relative;
+        padding: 28px 0 !important;
+    }
+
+    article.my_shoppings div.shoppings_wrapper section div.info .actions button {
+        position: relative;
+        top: 10px !important;
+
+    }
+
+    article.my_shoppings div.shoppings_wrapper section>ul.web {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        border-bottom: none;
+        column-gap: 0;
+        padding-bottom: 0;
+    }
+
+    article.my_shoppings div.shoppings_wrapper section>ul li.date {
+        text-align: right;
+    }
+
+    article.my_shoppings div.shoppings_wrapper section>ul.mobile {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        border-bottom: none;
+        padding-bottom: 0;
+        margin-top: 10px;
+    }
+
+    article.my_shoppings div.shoppings_wrapper section>ul.mobile li.date,
+    article.my_shoppings div.shoppings_wrapper section>ul.web li.total {
+        float: right;
+        text-align: right;
+    }
+
+    article.my_shoppings div.shoppings_wrapper section>ul.web li.method,
+    article.my_shoppings div.shoppings_wrapper section>ul.web li.date {
+        display: none;
+    }
+
+    article.my_shoppings div.shoppings_wrapper section div.info {
+        grid-template-columns: 1fr;
+    }
+
+    article.my_shoppings div.shoppings_wrapper section div.info>div.product span {
+        display: block;
+    }
+
+    article.my_shoppings div.shoppings_wrapper section div.info .actions {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        border-top: 1px solid #d1d0db;
+    }
+
+    article.my_shoppings div.shoppings_wrapper section div.info .list_products div.product {
+        display: block;
+    }
+
+    span.amount {
+        position: relative;
+        bottom: 52px;
+    }
+
+    div.detail_wrapper div.products>ul {
+        height: auto;
+        overflow-y: visible;
+    }
+
+    article.my_shoppings div.shoppings_wrapper {
+        padding: 5px;
+        position: relative;
+        top: 19px;
+    }
+
+    span.amount {
+        position: relative;
+
+    }
+}
+
+@media (min-width: 481px) and (max-width: 900px) {
+    article.my_shoppings div.shoppings_wrapper section div.info {
+        display: block !important;
+    }
+
+    article.my_shoppings div.shoppings_wrapper section div.info .actions button {
+        position: relative;
+        top: 3px;
+    }
+
+    article.my_shoppings div.shoppings_wrapper section div.info .actions label {
+        position: relative;
+        top: 13px;
+        left: 12px;
+    }
+
+    article.my_shoppings div.shoppings_wrapper section div.info .list_products div.product {
+        position: relative;
+        bottom: 10px !important;
+    }
+
+    article.my_shoppings div.shoppings_wrapper section div.info .actions {
+        display: flex;
+        flex-direction: inherit;
+        padding-top: 13px;
+        border-top: 1px solid #d1d0db;
+    }
+}

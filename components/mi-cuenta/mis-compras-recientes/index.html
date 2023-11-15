@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Giko | Mis compras recientes</title>
+    <link
+      rel="stylesheet"
+      href="https://gikolab.com/components/mi-cuenta/mis-compras-recientes/styles.css"
+    />
+  </head>
+  <body>
+    <article class="my_shoppings">
+      <input type="checkbox" name="show" id="show_shoppings" />
+      <div class="title" id="nav_screen1">
+        <img
+          class="shopping"
+          src="https://cdn-giko.s3.us-east-2.amazonaws.com/wp-content/uploads/2023/08/30141827/bag.svg"
+          alt="Icono de compras"
+        />
+        Histórico de compras
+      </div>
+      <div class="title" id="nav_screen2">
+        <label for="show_shoppings">
+          <img
+            src="https://cdn-giko.s3.us-east-2.amazonaws.com/wp-content/uploads/2023/08/22122027/back_arrow.svg"
+            alt="Icono de volver"
+          />
+          Volver
+        </label>
+        Detalle de pedido
+      </div>
+      <div class="shoppings_wrapper" id="screen1">
+        <div class="empty">
+          <img
+            src="https://cdn-giko.s3.us-east-2.amazonaws.com/wp-content/uploads/2023/07/19164228/favicon_32%402x.png"
+            alt="Logo Giko"
+            srcset=""
+          />
+          <p>Aún no tienes compras recientes</p>
+        </div>
+      </div>
+      <div class="detail_wrapper" id="screen2">
+        <div class="info_order">
+          <div>
+            <p>NÚMERO DEL PEDIDO</p>
+            <span id="show_order_id"></span>
+          </div>
+          <div>
+            <p>FECHA</p>
+            <span id="show_date_purchase"></span>
+          </div>
+        </div>
+        <h3>Detalles del pedido</h3>
+        <div class="details">
+          <div class="info">
+            <p>
+              <strong>Producto</strong>
+              <strong>Costo</strong>
+            </p>
+          </div>
+          <div class="products">
+            <ul id="show_products"></ul>
+          </div>
+          <div>
+            <p>
+              <strong>Subtotal</strong>
+              <strong id="show_subtotal"></strong>
+            </p>
+            <p><strong>Costo de envío</strong> <strong>$12,000</strong></p>
+          </div>
+          <div>
+            <p>
+              <strong>Método de Pago</strong>
+              <strong id="show_payment_method"></strong>
+            </p>
+          </div>
+          <div>
+            <p>
+              <strong>Total</strong>
+              <strong id="show_total" class="total"></strong>
+            </p>
+          </div>
+        </div>
+        <h3>Datos de envío</h3>
+        <p>Av 4 # 12 -35 Condominio Norte Torre 5 apartamento 301</p>
+        <p>Barrio Centro</p>
+        <p>Cúcuta</p>
+        <p>Norte de Santander</p>
+        <p id="show_email" class="email"></p>
+        <!-- <h3>Seguimiento del envío</h3>
+        <div class="follow_up">
+          <p>Número de Guía:</p>
+          <span>0347502183472934-2</span>
+        </div>
+        <div class="follow_up">
+          <p>Enlace de consulta:</p>
+          <a
+            href="www.enlacedelatransportadora.com/seguimiento-pedido/0347502183472934-2"
+            target="_blank"
+            >www.enlacedelatransportadora.com/seguimiento-pedido/0347502183472934-2</a
+          >
+        </div> -->
+      </div>
+    </article>
+
+    <script>
+      async function get_repay_url(order_id) {
+        let res = await fetch(
+          `https://gikolab.com/api/mi-cuenta/compras/get_repay_url.php?order_id=${order_id}`
+        );
+        res = await res.json();
+        if (res.ok) {
+          window.location.href = res.data;
+        }
+      }
+    </script>
+
+    <script src="https://gikolab.com/components/mi-cuenta/mis-compras-recientes/script.js"></script>
+  </body>
+</html>

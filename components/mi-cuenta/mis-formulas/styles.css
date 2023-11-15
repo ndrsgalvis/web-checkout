@@ -1,0 +1,349 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,700&display=swap");
+
+article.my_formulas {
+  background: #ffffff 0% 0% no-repeat padding-box;
+  overflow: hidden;
+}
+
+article.my_formulas div.formulas_wrapper,
+article.my_formulas div.detail_wrapper {
+  width: 640px;
+}
+
+article.my_formulas * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+article.my_formulas > button {
+  margin: 15px 22px;
+  float: right;
+  border: none;
+  outline: none;
+  appearance: none;
+  font: normal normal bold 16px/17px Poppins !important;
+  background: #4d63ff 0% 0% no-repeat padding-box;
+  border-radius: 21px;
+  height: 40px;
+  width: 230px;
+  color: white !important;
+  cursor: pointer;
+}
+
+article.my_formulas > button:hover {
+  background: #004dc8;
+}
+
+article.my_formulas div.title {
+  padding: 25px;
+  border-bottom: 1px solid #d1d0db;
+  text-align: left;
+  font: normal normal bold 16px/27px Poppins;
+  display: flex;
+  justify-content: space-between;
+}
+
+article.my_formulas div.title label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 10px;
+  font: normal normal bold 12px Poppins;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+article.my_formulas div.title img.glasses {
+  display: none;
+}
+
+article.my_formulas div.formulas_wrapper {
+  padding: 40px;
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 30px;
+  row-gap: 30px;
+  height: 550px;
+  overflow-y: scroll;
+}
+
+article.my_formulas div.detail_wrapper {
+  padding: 20px;
+  overflow-y: scroll;
+  border-bottom: 1px solid #d1d0db;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  width: 100%;
+}
+
+article.my_formulas div.formulas_wrapper section {
+  box-shadow: 0px 0px 10px #84829d63;
+  border-radius: 18px;
+  display: flex;
+  height: 200px;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+article.my_formulas div.formulas_wrapper section div.header {
+  display: flex;
+  margin: 20px 20px 0 20px;
+  justify-content: space-between;
+}
+
+article.my_formulas div.formulas_wrapper section div.header h4 {
+  font: normal normal bold 16px/27px Poppins;
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+}
+
+article.my_formulas div.formulas_wrapper section div.header button {
+  height: 25px;
+  width: 25px;
+  box-shadow: 0px 3px 6px #84829d33;
+  display: grid;
+  place-items: center;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+article.my_formulas div.formulas_wrapper section div.header button img {
+  transition: filter 0.3s ease;
+}
+
+article.my_formulas div.formulas_wrapper section div.header button:hover {
+  background: #4d63ff;
+}
+
+article.my_formulas div.formulas_wrapper section div.header button:hover img {
+  filter: brightness(0) invert(1);
+}
+
+article.my_formulas div.formulas_wrapper section div.content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+  margin: 0 20px;
+}
+
+article.my_formulas div.formulas_wrapper section div.content > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+article.my_formulas div.formulas_wrapper section div.content p {
+  font: normal normal bold 14px Poppins;
+}
+
+article.my_formulas div.formulas_wrapper section div.content a {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  color: #001a45;
+  text-decoration: none;
+  font: normal normal 400 10px Poppins;
+}
+
+article.my_formulas div.formulas_wrapper section div.content a.inactive img {
+  filter: grayscale(1) invert(97%) sepia(1%) saturate(4074%) hue-rotate(190deg)
+    brightness(100%) contrast(107%);
+}
+
+article.my_formulas div.formulas_wrapper section button {
+  appearance: none;
+  border: none;
+  outline: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+article.my_formulas div.formulas_wrapper section label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 10px;
+  color: #4d63ff;
+  font: normal normal 400 12px Poppins;
+  border-top: 1px solid #d1d0db;
+  padding: 10px 0;
+  cursor: pointer;
+}
+
+article.my_formulas div.formulas_wrapper div.empty {
+  min-width: 100%;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  flex-direction: column;
+  row-gap: 25px;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+article.my_formulas div.formulas_wrapper div.empty:only-child {
+  display: flex;
+}
+
+article.my_formulas div.formulas_wrapper div.empty p {
+  font: normal normal bold 14px Poppins;
+  color: #001a45;
+}
+
+article.my_formulas div.formulas_wrapper div.empty img {
+  width: 64px;
+  height: 64px;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"]:checked ~ #nav_screen2 {
+  display: flex;
+}
+
+input[type="checkbox"]:checked ~ #screen2 {
+  display: grid;
+}
+
+input[type="checkbox"]:checked ~ #save_formula {
+  display: block;
+}
+
+input[type="checkbox"]:checked ~ #nav_screen1,
+input[type="checkbox"]:checked ~ #screen1 {
+  display: none;
+}
+
+#nav_screen2,
+#save_formula,
+#screen2 {
+  display: none;
+}
+
+article.my_formulas div.detail_wrapper div.search {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+article.my_formulas div.detail_wrapper div.formula {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  align-items: center;
+  border: 1px dashed #4d63ff;
+  border-radius: 10px;
+  padding: 20px 40px;
+  text-align: center;
+}
+
+article.my_formulas div.detail_wrapper div.formula h3 {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  font: normal normal bold 16px Poppins;
+  color: #001a45;
+}
+
+article.my_formulas div.detail_wrapper div.formula p {
+  font: normal normal 400 12px Poppins;
+  color: #001a45;
+}
+
+article.my_formulas div.detail_wrapper label {
+  font: normal normal bold 14px Poppins;
+  color: #001a45;
+}
+
+article.my_formulas div.detail_wrapper input {
+  border: 2px solid #002f7b;
+  border-radius: 7px;
+  height: 37px;
+  color: #002f7b;
+  font: normal normal 500 14px Poppins;
+  padding-left: 16px;
+}
+
+article.my_formulas div.detail_wrapper input::placeholder {
+  color: #002f7b;
+}
+
+article.my_formulas div.detail_wrapper div.measures {
+  border: 1px solid #d1d0db;
+  border-radius: 14px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+article.my_formulas div.detail_wrapper div.measures > div {
+  display: grid;
+  grid-template-columns: 150px 1fr 1fr 1fr;
+  column-gap: 20px;
+  align-items: center;
+}
+
+article.my_formulas div.detail_wrapper div.measures > div p {
+  color: #001a45;
+  font: normal normal bold 14px Poppins;
+}
+
+article.my_formulas div.detail_wrapper div.measures > div span {
+  color: #001a45;
+  font: normal normal 500 12px Poppins;
+}
+
+article.my_formulas div.detail_wrapper div.measures > div:not(:last-child) {
+  border-bottom: 1px solid #d1d0db;
+  padding-bottom: 10px;
+}
+
+@media screen and (max-width: 480px) {
+  article.my_formulas div.formulas_wrapper section div.content > div {
+    justify-content: flex-start;
+    column-gap: 15px;
+  }
+
+  article.my_formulas div.formulas_wrapper div.empty {
+    height: calc(100vh - 250px);
+  }
+
+  article.my_formulas div.title {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    column-gap: 10px;
+  }
+
+  article.my_formulas div#nav_screen2 {
+    justify-content: space-between;
+  }
+
+  article.my_formulas div.title img.glasses {
+    display: block;
+  }
+
+  article.my_formulas div.formulas_wrapper {
+    grid-template-columns: 1fr;
+    padding: 30px 20px;
+    height: fit-content;
+    width: 100%;
+  }
+
+  article.my_formulas div.detail_wrapper {
+    padding: 30px 20px;
+    height: fit-content;
+    width: 100%;
+  }
+}
+
+label.show-on-small-screen-returns img {
+    position: relative;
+    top: 10px;
+}

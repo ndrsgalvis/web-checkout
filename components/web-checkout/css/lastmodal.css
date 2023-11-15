@@ -1,0 +1,704 @@
+#confirmar_compra article {
+    display: flex;
+
+}
+
+#checkout_formulas .btn-close, #confirmar_compra .btn-close {
+    background: url('https://cdn-giko.s3.us-east-2.amazonaws.com/wp-content/uploads/2023/09/20144224/close_2.svg') !important;
+    background-size: cover;
+    background-repeat: no-repeat !important;
+    color: #FFFFFF !important;
+    opacity: 1;
+}
+
+#confirmar_compra .modal-content {
+    width: 95%;
+    border-radius: 20px;
+}
+
+#confirmar_compra .btn-secondary {
+    background-color: #4D63FF;
+    border: none;
+    border-radius: 20px;
+    width: 219px;
+    height: 41px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+#confirmar_compra .modal-body {
+    padding: 0;
+}
+
+#confirmar_compra .disttancia-numero {
+    margin-right: 41px !important;
+}
+
+#confirmar_compra .container {
+
+    box-shadow: 0px 0px 10px #00000029;
+    border-radius: 14px;
+    opacity: 1;
+    justify-content: space-between;
+    border: 1px solid #00000029;
+    flex-wrap: wrap;
+}
+
+#confirmar_compra .fs-5 {
+    font-size: 12px;
+}
+
+#confirmar_compra .links_button {
+    display: flex;
+    gap: 18px;
+    padding-top: 20px;
+    justify-content: center;
+    margin-bottom: 14px;
+    margin-right: 19px;
+}
+
+#confirmar_compra .formula_medica {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+#confirmar_compra h1.title_formula {
+    padding-left: 16px;
+    color: #002F7B;
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+#confirmar_compra .container_child {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+}
+
+#confirmar_compra .title {
+    font-size: 14px;
+    color: #002F7B;
+    font-weight: 700;
+    padding: 12px;
+}
+
+#confirmar_compra .imagen-destacada {
+    width: 194px;
+    height: 70px;
+    background: transparent;
+}
+
+#confirmar_compra .title_referencia {
+    padding: 10px;
+
+    padding-left: 15px;
+    color: #002F7B;
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+#confirmar_compra .title_filter {
+    font-size: 14px;
+    color: #002F7B;
+    font-weight: 700;
+    padding-left: 15px;
+}
+
+#confirmar_compra .title_filter_code {
+    font-size: 14px;
+    color: #002F7B;
+    font-weight: 500;
+    padding-left: 15px;
+}
+
+#confirmar_compra ul {
+    list-style-type: none;
+}
+
+#confirmar_compra .images {
+    width: 295px;
+    border-bottom: 1px solid #00000029;
+    height: 100px;
+    flex-shrink: 0;
+    text-align: center;
+    padding-top: 13px;
+}
+
+#confirmar_compra .material_filter {
+    display: flex;
+    border-top: 1px solid #00000029;
+    flex-direction: column;
+    padding: 10px;
+}
+
+#confirmar_compra .referencias {
+    padding: 0;
+    font-size: 10px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 17px;
+    color: #001A45;
+    font-weight: 500;
+    font-style: normal;
+}
+
+#confirmar_compra .finalizar_compra {
+    width: 219px;
+    height: 41px;
+    background: #4D63FF;
+    border-radius: 21px;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+}
+
+
+#confirmar_compra .distancias-pupilar {
+    display: flex;
+    justify-content: space-between;
+}
+
+#confirmar_compra .izquierdo,
+#confirmar_compra .derecho {
+    color: #001A45;
+    text-align: center;
+    font-family: 'Poppins';
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+#confirmar_compra .distancia-numero {
+    grid-column: 1 / span 3;
+    text-align: left;
+    color: #001A45;
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: -17px;
+}
+
+
+#confirmar_compra .date_formula .grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+
+}
+
+#confirmar_compra .date_formula .grid-item {
+    padding-left: 14px;
+    color: #001A45;
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    height: 36px;
+    line-height: normal;
+    padding-top: 7px;
+}
+
+#confirmar_compra .date_formula .grid-item:not(:last-child) {
+    border-bottom: 1px solid #ccc;
+}
+
+#confirmar_compra .grid-title {
+    color: #001A45;
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+#confirmar_compra .grid-items {
+    grid-template-columns: auto 1fr 1fr !important;
+    display: grid;
+    column-gap: 10px;
+    padding: 6px;
+    font-size: 12px;
+    padding-left: 13px;
+}
+
+#confirmar_compra .grid-items>div:nth-child(even) {
+    margin-right: 17px;
+}
+
+#confirmar_compra h1.title-ojo {
+    color: #001A45;
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding-top: 4px;
+}
+
+#confirmar_compra h1.ojo-derecho {
+    color: #001A45;
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding-top: 4px;
+}
+
+#confirmar_compra .grid-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#confirmar_compra .boton-enlace {
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    display: inline-block;
+    /* Cambiamos a inline-block para que no ocupe toda la línea */
+    position: relative;
+    padding-left: 7px;
+}
+
+#confirmar_compra .boton-texto {
+    display: inline-block;
+    margin-left: 47px;
+    display: inline-block;
+    margin-left: 47px;
+    color: #4D63FF;
+    font-family: 'Poppins';
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+}
+
+
+#confirmar_compra .grid-item {
+    display: flex;
+    gap: 10px;
+}
+
+#confirmar_compra .red {
+    display: flex;
+    gap: 38px;
+    padding-left: 53px;
+}
+
+#confirmar_compra .grid-item-eyes {
+    grid-template-columns: auto 1fr 1fr !important;
+    display: grid;
+    border: 1px solid #ccc;
+    padding-left: 11px;
+    font-size: 12px;
+    text-align: center;
+    column-gap: 34px;
+    padding-top: 5px;
+}
+
+#confirmar_compra p {
+    color: #001A45;
+    font-size: 13px;
+}
+
+#confirmar_compra p span {
+    font-weight: bold;
+}
+
+#confirmar_compra .total {
+    padding-left: 221px;
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #002F7B;
+}
+
+#confirmar_compra div.custom_input_number input {
+    border: none;
+    outline: none;
+    font: normal normal bold 12px/18px Poppins;
+    color: #001a45;
+    text-align: center;
+    height: 25px;
+    border-left: 1px solid #6f7d95;
+    border-right: 1px solid #6f7d95;
+}
+
+#confirmar_compra div.custom_input_number input::-webkit-outer-spin-button,
+#confirmar_compra div.custom_input_number input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#confirmar_compra .modal-header {
+    padding: 15px 21px !important;
+}
+
+#confirmar_compra div.custom_input_number button {
+    font: normal normal bold 12px/18px Poppins;
+    border: none;
+    background: white;
+    outline: none;
+    color: #6f7d95;
+    font-size: 20px;
+    z-index: 100;
+    cursor: pointer;
+}
+
+#confirmar_compra .modal-title {
+    margin-bottom: 0;
+    color: #002F7B;
+    font-family: Poppins;
+    font-size: 14px !important;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+#confirmar_compra div.custom_input_number {
+    border: 1px solid #6f7d95;
+    border-radius: 18px;
+    display: grid;
+    grid-template-columns: repeat(3, 25px);
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    width: fit-content;
+    float: right;
+    margin-top: -85px;
+    margin-right: 20px;
+}
+
+#confirmar_compra .title_img {
+    display: grid;
+    grid-template-columns: repeat(2, 90% 25px);
+    border-bottom: 1px solid #00000029;
+}
+
+#confirmar_compra .custom-button {
+    background: transparent;
+    border: none;
+    /* Quita el borde del botón */
+    padding: 10px 20px;
+    /* Espaciado interno del botón */
+    cursor: pointer;
+    /* Cambia el cursor al pasar sobre el botón */
+}
+
+#confirmar_compra .link_add_products {
+    color: #004DC8;
+    font-size: 14px;
+    padding-top: 10px;
+}
+
+#confirmar_compra .modal-footer {
+    gap: 17px;
+    padding-right: 40px !important;
+    display: flex !important;
+    flex-direction: row;
+    justify-content: end !important;
+}
+
+#confirmar_compra button.btn.btn-secondary {
+    background-color: #4D63FF;
+    border: none;
+    border-radius: 20px;
+}
+
+
+#confirmar_compra .referencia {
+    padding-left: 10px;
+}
+
+@media (min-width: 320px) and (max-width: 481px) {
+
+    #confirmar_compra body {
+        overflow-y: hidden;
+        width: 100%;
+        padding: 10px;
+    }
+
+    #confirmar_compra .container {
+        width: 100%;
+    }
+
+    #confirmar_compra article {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #confirmar_compra .container_child {
+        padding: 0px !important;
+    }
+
+    #confirmar_compra div.custom_input_number {
+        margin-right: 0px !important;
+    }
+
+    #confirmar_compra .referencia {
+        margin-left: -11px;
+    }
+
+    #confirmar_compra .edad {
+        padding-right: 12px;
+    }
+
+    #confirmar_compra .modal-footer a {
+        border-bottom: 1px solid #00000029 !important;
+        width: 100%;
+        text-align: center;
+    }
+
+    #confirmar_compra button.btn.btn-secondary {
+        width: 100%;
+        background-color: #4D63FF;
+        border: none;
+        border-radius: 20px;
+    }
+
+    #confirmar_compra .modal-footer {
+        border: none !important;
+        display: flex;
+        flex-direction: column;
+        margin-top: -27px;
+        gap: 17px;
+        padding-right: 119px !important;
+    }
+    
+
+    #confirmar_compra button.btn.btn-secondary {
+        width: 100%;
+        background-color: #4D63FF;
+        border: none;
+        border-radius: 20px;
+
+    }
+
+    #confirmar_compra .title_filter_code {
+        text-align: right;
+        position: relative;
+        bottom: 24px;
+    }
+
+    #confirmar_compra a.link_add_products {
+        padding-bottom: 26px;
+    }
+
+
+    #confirmar_compra .material_filter {
+        padding-top: 15px;
+        margin-left: -20px;
+        width: 111%;
+    }
+
+    #confirmar_compra h1.title_formula {
+        padding-left: 16px;
+        margin-bottom: 30px;
+        margin-top: -18px;
+        margin-left: -30px;
+    }
+
+    #confirmar_compra .finalizar_compra {
+        width: 153px;
+        height: 34px;
+    }
+
+    #confirmar_compra .date_formula {
+        margin-left: -22px;
+    }
+
+    #confirmar_compra .grid-item-eyes {
+        display: block;
+    }
+
+    #confirmar_compra h1.title-ojo {
+        margin-right: 233px;
+    }
+
+    #confirmar_compra h1.ojo-derecho {
+        margin-right: 225px;
+    }
+
+
+    #confirmar_compra .total {
+        padding-left: 73px;
+    }
+
+    #confirmar_compra .modal-content {
+        width: 79%;
+        border-radius: 20px;
+    }
+
+    #confirmar_compra .links_button {
+        margin-right: 0;
+    }
+
+    #confirmar_compra .fs-5 {
+        font-size: 14px !important;
+    }
+
+    #confirmar_compra .imagen-destacada {
+        width: 91%;
+        height: 116px;
+        margin-top: -25px;
+    }
+
+    #confirmar_compra .custom-button {
+        padding: 0;
+    }
+
+    #confirmar_compra .boton-editar {
+        display: none;
+    }
+
+    #confirmar_compra .images {
+        width: 100% !important;
+        border-bottom: 1px solid #00000029;
+    }
+
+    #confirmar_compra .formula_medica {
+        flex-wrap: wrap;
+    }
+
+    #confirmar_compra .formula_medica {
+        padding: 0px;
+        display: flex;
+        flex-direction: column;
+        margin-left: 23px;
+    }
+
+    #confirmar_compra .izquierdo {
+        display: flex;
+    }
+
+    #confirmar_compra .derecho {
+        display: flex;
+    }
+
+    #confirmar_compra h1#exampleModalLabel {
+        font-size: 14px !important;
+        width: 79% !important;
+    }
+
+    #confirmar_compra .modal-header .btn-close {
+        padding: 0;
+        margin: 0;
+    }
+
+    #confirmar_compra .grid-items {
+        display: block !important;
+    }
+
+    #confirmar_compra .referencias {
+        position: relative;
+        bottom: 12px;
+    }
+
+    #confirmar_compra .red {
+        padding-left: 0;
+    }
+    #confirmar_compra div.custom_input_number{
+        position: absolute;
+        left: 347px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 1100px) {
+
+
+    #confirmar_compra .modal-footer{
+        padding-right: 119px !important;
+    }
+
+    #confirmar_compra .container {
+        width: 90%;
+    }
+
+    #confirmar_compra article {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #confirmar_compra .title_filter_code {
+        margin-right: 24px;
+        padding-left: 15px;
+        text-align: right;
+        margin-top: -13px;
+    }
+
+    #confirmar_compra .images {
+        width: 472px;
+    }
+    #confirmar_compra .formula_medica{
+        width: 472px;
+    }
+    #confirmar_compra div.custom_input_number{
+        position: absolute;
+        left: 354px;
+    }
+
+    #confirmar_compra .total{
+        text-align: center !important;
+        padding-left: 0;
+    }
+    #confirmar_compra .boton-editar{
+        display: none;
+    }
+    #confirmar_compra .edad {
+        position: relative;
+        right: 40px;
+    }
+}
+
+/* Estilos para escritorio */
+@media (min-width: 768px) {
+    #confirmar_compra .grid-items {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #confirmar_compra .distancias-pupilar {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        column-gap: 87px;
+        margin-left: 45px;
+    }
+
+    #confirmar_compra .numero-2 {
+        display: none;
+    }
+}
+
+/* Estilos para teléfono */
+@media (max-width: 767px) {
+    #confirmar_compra .grid-items {
+        display: block;
+    }
+
+    #confirmar_compra .numero-2 {
+        position: relative;
+        bottom: 23px;
+        text-align: right;
+        padding-right: 17px;
+    }
+}

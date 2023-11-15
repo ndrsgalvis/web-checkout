@@ -1,0 +1,126 @@
+/* Estilo para los controles del input numérico */
+inpu[type="file"]#file-upload-button {
+  display: none !important;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button,
+input[type="file"] {
+  /* Oculta los botones de aumento y reducción en navegadores basados en WebKit (Chrome, Safari, Opera) */
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+/* TEST */
+.photobooth {
+  background: white;
+  max-width: 150rem;
+  margin: 2rem auto;
+  border-radius: 2px;
+}
+.modal-title {
+  font-size: 14px !important;
+  font-weight: bold !important;
+}
+
+.modal-body button {
+  /* margin-bottom: 20px; */
+}
+
+#filtersForm .modal-dialog,
+#formulaForm .modal-dialog {
+  margin-top: 0px !important;
+  margin-right: 0px !important;
+  margin-bottom: 0px !important;
+}
+#filtersForm .modal.fade .modal-dialog,
+#formulaForm .modal.fade .modal-dialog {
+  transform: translate(100px, 0px) !important;
+}
+#filtersForm .modal-content,
+#formulaForm .modal-content {
+  border-radius: 0px !important;
+  height: 100vh !important;
+}
+
+#formulaForm input[type="nummber"] {
+  width: 60% !important;
+  padding: 0px !important;
+}
+
+.modal-header .close {
+  padding: 0 7px;
+  border: none;
+  color: white;
+  border-radius: 100%;
+  position: relative;
+  background-color: #f19d4b;
+}
+.modal-header .close:before {
+  content: "Cerrar";
+  right: 35px;
+  position: absolute;
+  color: #001a45;
+}
+
+.modal-footer {
+  justify-content: center !important;
+}
+
+.take-photo {
+  border: none;
+  padding: 10px;
+  border-radius: 100%;
+  background-color: #4d63ff;
+}
+
+/*clearfix*/
+.photobooth:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.photo {
+  width: 100%;
+  float: left;
+}
+
+.player {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 200px;
+}
+
+/*
+    Strip!
+  */
+
+.strip {
+  padding: 2rem;
+}
+
+.strip img {
+  width: 100px;
+  overflow-x: scroll;
+  padding: 0.8rem 0.8rem 2.5rem 0.8rem;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+  background: white;
+}
+
+.strip a:nth-child(5n + 1) img {
+  transform: rotate(10deg);
+}
+.strip a:nth-child(5n + 2) img {
+  transform: rotate(-2deg);
+}
+.strip a:nth-child(5n + 3) img {
+  transform: rotate(8deg);
+}
+.strip a:nth-child(5n + 4) img {
+  transform: rotate(-11deg);
+}
+.strip a:nth-child(5n + 5) img {
+  transform: rotate(12deg);
+}

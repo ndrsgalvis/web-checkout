@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Giko | Mis fórmulas</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://gikolab.com/components/mi-cuenta/mis-formulas/styles.css"
+    />
+  </head>
+  <body>
+    <article class="my_formulas">
+      <input type="checkbox" name="show" id="show_fomulas" />
+      <div class="title" id="nav_screen1">
+        <img
+          class="glasses"
+          src="https://cdn-giko.s3.us-east-2.amazonaws.com/wp-content/uploads/2023/09/12112041/mis_formulas.svg"
+          alt="Icono de gafas"
+        />
+        Mis Fórmulas
+      </div>
+      <div class="title" id="nav_screen2">
+        <label for="show_fomulas">
+          <img
+            src="https://cdn-giko.s3.us-east-2.amazonaws.com/wp-content/uploads/2023/08/22122027/back_arrow.svg"
+            alt="Icono de volver"
+          />
+          Volver
+        </label>
+        Editar fórmula
+      </div>
+      <div class="formulas_wrapper" id="screen1">
+        <div class="empty">
+          <img
+            src="https://cdn-giko.s3.us-east-2.amazonaws.com/wp-content/uploads/2023/07/19164228/favicon_32%402x.png"
+            alt="Logo Giko"
+            srcset=""
+          />
+          <p>Aún no tienes fórmulas registradas</p>
+        </div>
+      </div>
+      <div class="detail_wrapper" id="screen2">
+        <div class="search">
+          <label for="search_formula">Nombre de la fórmula</label>
+          <input
+            type="text"
+            id="search_formula"
+            value=""
+            placeholder="Tú Fórmula"
+          />
+        </div>
+        <input type="hidden" id="id_formula" />
+        <div class="formula">
+          <h3 id="title_formula"></h3>
+          <p>
+            Esta imagen corresponde a la foto que subiste con tu cámara o
+            archivo. Si los datos de la fórmula no coinciden o deseas cambiarla
+            puedes hacer click en reemplazar.
+          </p>
+        </div>
+        <div class="measures">
+          <div>
+            <p>Edad del usuario:</p>
+            <p id="age_user"></p>
+          </div>
+          <div>
+            <p>
+              Distancia pupilar: <br />
+              2 números
+            </p>
+            <span id="dpi">Izquierdo:<span></span></span>
+            <span id="dpd">Derecho:<span></span></span>
+          </div>
+          <div>
+            <p>Ojo Derecho:</p>
+            <p>Esfera<br /><span id="odsph"></span></p>
+            <p>Cilindro<br /><span id="odcyl"></span></p>
+            <p>Eje<br /><span id="axisd"></span></p>
+          </div>
+          <div>
+            <p>Ojo izquierdo:</p>
+            <p>Esfera<br /><span id="ozsph"></span></p>
+            <p>Cilindro<br /><span id="ozcyl"></span></p>
+            <p>Eje<br /><span id="axisi"></span></p>
+          </div>
+        </div>
+      </div>
+      <button id="save_formula">Guardar Cambios</button>
+    </article>
+
+    <script src="https://gikolab.com/components/mi-cuenta/mis-formulas/script.js"></script>
+  </body>
+</html>

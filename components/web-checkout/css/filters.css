@@ -1,0 +1,176 @@
+:root {
+  --primary-text-color: #002f7b;
+  --secondary-text-color: #004dc8;
+}
+
+.hide {
+  display: none;
+}
+
+#info_prod .modal-header{
+	border-bottom: 1px solid #eee !important;
+}
+#info_prod .modal-header h1{
+	color: #004DC8;
+	position: relative;
+    padding-left: 35px;
+}
+#info_prod .modal-header h1:before{
+	content: "";
+	width: 18px;
+	height: 18px;
+ 	position: absolute;
+    background: url(https://gikolab.com/wp-content/uploads/2023/09/FontAwsome-question-circle.svg);
+    background-size: contain;
+	margin-left: -30px;
+    margin-top: 5px;
+}
+
+#info_prod .btn-close {
+    background: url('https://cdn-giko.s3.us-east-2.amazonaws.com/wp-content/uploads/2023/09/20144224/close_2.svg') !important;
+    background-size: cover;
+    background-repeat: no-repeat !important;
+    color: #FFFFFF !important;
+    opacity: 1;
+}
+
+h5.breadcrumbs span {
+	position: relative;
+	margin-right: 20px !important;
+} 
+
+h5.breadcrumbs span:after {
+    content: '';
+    background: url(https://gikolab.com/wp-content/uploads/2023/11/arrow-breadcrumb.svg);
+    background-size: contain;
+    width: 20px;
+    height: 20px;
+    bottom: -2px;
+    position: absolute;
+}
+
+h5.breadcrumbs {
+  color: #001A45 !important;
+  font-weight: 500;
+  font-size: 12px !important;
+  height: 20px;
+
+}
+
+h3.title {
+  color: var(--primary-text-color);
+  font-weight: 700;
+  font-size: 18px;
+  text-align: center;
+  height: 20px;
+}
+
+#filtersForm .modal-body,
+#container {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 20px;
+  align-content: baseline;
+}
+
+#filtersForm .modal-body div,
+#container div {
+  height: fit-content;
+  position: relative;
+  border-radius: 10px;
+  border: 1px solid #c2c2c2;
+  transform-origin: bottom;
+  transition: opacity 3s, transform 0.5s, height 0.5s,
+    display 3.5s allow-discrete;
+}
+
+#filtersForm .modal-body label,
+#container label {
+  width: 100%;
+  padding: 20px 20px 20px 5px;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--primary-text-color);
+}
+
+#filtersForm .modal-body p,
+#container p {
+  width: 80%;
+  font-size: 10px;
+  font-weight: 500;
+  color: var(--primary-text-color);
+}
+
+.input-radio-1,
+.input-radio {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  position: absolute;
+  top: 38%;
+  right: 10px;
+  bottom: 0;
+  height: 25px;
+  width: 25px;
+  transition: all 0.15s ease-out 0s;
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 0.5rem;
+  outline: none;
+  z-index: 1000;
+  border-radius: 50%;
+}
+
+.input-radio-1 {
+  border: 1px solid #c2c2c2;
+  color: #fff;
+}
+
+.input-radio {
+  background-image: url(../assets/arrow.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  color: #fff;
+}
+
+/* #container div[data-step="step-1"] input:hover {
+    background: #9faab7;
+  } */
+.input-radio-1:checked,
+.input-radio:checked {
+  background: #40e0d0;
+  border: none;
+}
+
+.input-radio-1:checked::before,
+.input-radio:checked::before {
+  width: 12px;
+  height: 25px;
+  display: flex;
+  content: "";
+  font-size: 25px;
+  font-weight: bold;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  background-image: url(../assets/check-solid.svg);
+  filter: invert(1);
+  background-position: center;
+  background-size: contain;
+  margin: 1px 0px 0px 6px;
+  background-repeat: no-repeat;
+}
+
+.input-radio-1:checked::after,
+.input-radio:checked::after {
+  background: rgb(64, 224, 139);
+  content: "";
+  display: block;
+  position: relative;
+  z-index: 100;
+  border-radius: 50%;
+}

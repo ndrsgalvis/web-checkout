@@ -1,0 +1,154 @@
+.contenedor_distancia button.active:after {
+    content: 'c';
+    position: absolute;
+    width: 100%;
+    background: blue;
+    left: 0px;
+    bottom: -13px;
+    height: 3px;
+    color: white;
+}
+
+.btn-close {
+  background: url('https://cdn-giko.s3.us-east-2.amazonaws.com/wp-content/uploads/2023/09/20144224/close_2.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  color: #FFFFFF !important;
+  opacity: 1;
+}
+
+.title-modal {
+  display: flex;
+  gap: 17px;
+}
+
+.title-modal img {
+  width: 30px;
+}
+
+#dpupilar .modal-header, #od-oi-details .modal-header {
+  display: grid !important;
+}
+
+.contenedor_distancia {
+  gap: 51px;
+  display: flex;
+  border-bottom: 3px solid #E9E9EF;
+}
+
+h1.distancia-pupilar {
+  font-size: 16px;
+  color: #001A45;
+  font-weight: bold;
+}
+
+button.btn.btn-secondary {
+  background-color: #4D63FF;
+  border: none;
+  border-radius: 20px;
+  width: 51%;
+}
+
+.modal-content {
+  border-radius: 20px !important;
+}
+
+.modal-footer {
+  display: flex;
+  flex-direction: column;
+}
+.modal-header{
+  border-bottom: none !important;
+}
+
+/* Estilo de las pestañas */
+.tab-button-1, .tab-button {
+  background-color: #ccc;
+  border: none;
+  color: #D1D0DB;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+/* Estilo de la pestaña activa */
+.tab-button-1.active, .tab-button.active {
+  color: #D1D0DB;
+  /* Color de fondo para pestaña activa (azul original) */
+  color: #001A45;
+}
+
+/* Estilo de la barra indicadora */
+.indicator-bar {
+  height: 3px;
+  background-color: #4D63FF;
+  /* Color original */
+  width: 0;
+  transition: width 0.3s ease;
+}
+
+.contenedor-descripcion p {
+  font-size: 14px;
+  color: #002F7B;
+  font-weight: 500;
+  padding-top: 20px;
+}
+
+.contenedor-descripcion {
+  padding: 16px;
+}
+
+.image-container {
+  filter: grayscale(1);
+  padding-top: 28px;
+}
+
+.image-container img {
+  width: 100%;
+}
+
+
+.distancia-pupilar-central {
+  text-align: center;
+  font-size: 16px;
+  color: #001A45;
+  font-weight: bold;
+}
+
+.hidden-content {
+  display: none;
+}
+
+button.tab-button, button.tab-button-1 {
+  background-color: transparent;
+  border: none;
+}
+
+.contenedor_distancia {
+  position: relative;
+}
+
+.indicator-bar {
+  height: 3px;
+  background-color: blue;
+  transition: width 0.3s ease-in-out, transform 0.3s ease-in-out;
+  position: absolute;
+  bottom: -3px;
+}
+
+.button-container {
+  position: relative;
+}
+
+/* Estilo para los botones */
+.tab-button {
+  margin: 10px;
+}
+
+@media(max-width:480px) {
+  .contenedor_distancia {
+    display: flex;
+     gap: 1px !important; 
+    padding-top: 38px !important;
+}
+}

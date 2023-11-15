@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Giko | Cambios y devoluciones</title>
+    <link rel="stylesheet" href="https://gikolab.com/components/mi-cuenta/cambios-y-devoluciones/styles.css" />
+  </head>
+
+  <body>
+    <article class="my_shoppings">
+      <input type="checkbox" name="show" id="show_shoppings" />
+      <div class="title" id="nav_screen1">
+        <img
+          class="shopping"
+          src="https://cdn-giko.s3.us-east-2.amazonaws.com/wp-content/uploads/2023/08/30141827/bag.svg"
+          alt="Icono de compras"
+        />
+        Cambios y devoluciones
+      </div>
+      <div class="title" id="nav_screen2">
+        <label for="show_shoppings">
+          <img
+            src="https://cdn-giko.s3.us-east-2.amazonaws.com/wp-content/uploads/2023/08/22122027/back_arrow.svg"
+            alt="Icono de volver"
+          />
+          Volver
+        </label>
+        <span></span>
+      </div>
+      <div class="shoppings_wrapper" id="screen1">
+        <div class="empty">
+          <img
+            src="https://cdn-giko.s3.us-east-2.amazonaws.com/wp-content/uploads/2023/07/19164228/favicon_32%402x.png"
+            alt="Logo Giko"
+          />
+          <p>Aún no tienes compras recientes</p>
+        </div>
+      </div>
+
+      <div class="detail_wrapper" id="screen2">
+        <section class="informacion-lentes">
+          <div class="informacion">
+            <div class="informacion-contenido" id="informacion-cont">
+              <h4>Pedido</h4>
+              <p class="orden" id="order_id"></p>
+            </div>
+
+            <div class="informacion-contenido" id="informacion-date"style="
+    font-size: 12px !important;
+">
+              <h4>Fecha</h4>
+              <p id="date_purchase"></p>
+            </div>
+
+            <div class="informacion-contenido" id="informacion-price">
+              <h4>Total pagado</h4>
+              <p id="total"></p>
+            </div>
+
+            <div class="informacion-contenido" id="informacion-pago">
+              <h4>Método de Pago</h4>
+              <p id="payment_method"></p>
+            </div>
+
+            <div class="informacion-contenido" id="informacion-date-entrega">
+              <h4>Fecha de entrega</h4>
+              <p class="derecha" id="deadline"></p>
+            </div>
+          </div>
+
+          <div class="list_products descripcion" id="itemsPedido"></div>
+        </section>
+        <section id="wrapper_motive" class="motivo">
+          <form id="form_options" method="post">
+            <div class="motive">
+              <p>Motivo de la reclamación</p>
+              <div class="btn-search">
+                <select name="motivo-select" id="motivo-select">
+                  <option value="1">No es el producto que pedí</option>
+                  <option value="2">No puedo ver bien con los lentes</option>
+                  <option value="3" selected>
+                    El producto llegó en mal estado
+                  </option>
+                  <option value="4">Me hizo falta un producto</option>
+                  <option value="5">El producto jamás llegó</option>
+                  <option value="6">Otro</option>
+                </select>
+              </div>
+            </div>
+            <p>Detalles de la reclamación</p>
+            <section class="mensaje">
+              <div class="mensaje-usuario">
+                <textarea
+                  name="mensaje-usuario"
+                  placeholder="Describe los detalles del motivo de tu reclamación"
+                  maxlength="400"
+                  required
+                ></textarea>
+              </div>
+
+              <div class="archivo" id="motivos">
+                <label class="custom-file-upload">
+                  <div class="btn-background">
+                    <img
+                      src="https://cdn-giko.s3.us-east-2.amazonaws.com/wp-content/uploads/2023/09/22090806/Icono_Adjuntar.svg"
+                    />
+                  </div>
+			  <input type="file" accept="image/png, image/jpeg" multiple />
+                  Adjuntar evidencia
+                </label>
+                <div class="archivos-subidos"></div>
+              </div>
+            </section>
+
+            <section class="final">
+              <div class="btn-reclamacion" id="enviarReclamacion">
+                <button type="submit">Enviar Reclamación</button>
+              </div>
+            </section>
+          </form>
+        </section>
+        <section id="wrapper_motive_detail" class="motive_detail">
+          <div>
+            <h4>Motivo de la reclamación</h4>
+            <p id="motive_text"</p>
+
+            <h4>Descripción de la Reclamación</h4>
+            <p id="motive_description">
+              
+            </p>
+            <div id="evidence_photos">
+          
+            </div>
+          </div>
+        <h4>Estado de la reclamación</h4>
+        <ul id="steps_claim">
+          <li>
+            <span>1</span>
+            Envío
+          </li>
+          <li>
+            <span>2</span>
+            En Revisión
+          </li>
+          <li>
+            <span>3</span>
+            Respuesta
+          </li>
+          <li>
+            <span>4</span>
+            Solución
+          </li>
+
+        </ul>
+        <p>Tu solicitud fue recibida por el equipo de soporte de GIKO y está siendo estudiada para dar respuesta. Tu respuesta será radicada entre 24 a 48 horas después de su envío según su complejidad.</p>
+        </section>
+      </div>
+    </article>
+
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.1031.0.min.js"></script>
+
+    <script src="https://gikolab.com/components/mi-cuenta/cambios-y-devoluciones/script.js"></script>
+  </body>
+</html>
